@@ -1,5 +1,17 @@
 load('//:subdir_glob.bzl', 'subdir_glob')
 
+filegroup(
+  name = 'macros',
+  srcs = glob([
+    'cmake/**/*.cmake',
+    'cmake/**/*.in',
+    '*.txt',
+  ]),
+  visibility = [
+    'PUBLIC',
+  ],
+)
+
 genrule(
   name = 'cmake',
   out = 'out',
