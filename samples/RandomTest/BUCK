@@ -1,0 +1,9 @@
+cxx_binary(
+  name = 'RandomTest',
+  srcs = glob([
+    '*.cpp',
+  ]),
+  deps = [
+    '//:turf',
+  ],
+)
